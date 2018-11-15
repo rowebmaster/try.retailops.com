@@ -1,0 +1,3 @@
+@each $size, $value in $border-sizes {
+    @include border-size(".border-#{$size}", $value);
+}

@@ -1,0 +1,35 @@
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    left: 0 !important;
+}
+
+.timepicker {
+    .table-condensed {
+        font-size: $font-size-xl;
+        text-align: center;
+        width: 100%;
+    }
+
+    .timepicker-hour,
+    .timepicker-minute,
+    .hour,
+    .minute {
+        cursor: pointer;
+        display: inline-block;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: $input-padding-x-sm;
+        line-height: $input-btn-line-height-sm;
+        border-radius: $border-radius;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+    }
+}

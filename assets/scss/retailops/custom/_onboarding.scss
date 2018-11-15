@@ -1,0 +1,136 @@
+.complete-p {
+
+    input,
+    select,
+    button {
+        margin-bottom: 20px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    input,
+    button {
+        border-radius: 0;
+    }
+
+    p-text {
+        margin-bottom: 10px;
+    }
+
+    .company-name {
+        width: 50%;
+    }
+
+    .number,
+    .entity {
+        width: 30%
+    }
+
+    .sentence {
+        width: 60%;
+    }
+
+    .one-word {
+        width: 33%;
+    }
+
+    @include media-breakpoint-up(md) {
+        .dropdown.bootstrap-select {
+            width: 25% !important;
+        }
+
+        .company-name {
+            width: 25%;
+        }
+
+        .sentence {
+            width: 33%;
+        }
+
+        .one-word {
+            width: 15%;
+        }
+
+        .number,
+        .entity {
+            width: 10%
+        }
+    }
+}
+
+label {
+    .help-icon {
+        position: absolute;
+        top: 25%;
+        right: 0;
+    }
+}
+
+.theme-picker {
+    padding-left: 0;
+
+    .theme.custom-control-label {
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .custom-control-input:checked~.custom-control-label img {
+        border: 5px solid $info;
+        border-radius: 5px;
+        box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    }
+}
+.form-check-input:checked ~ label.checked-default {
+    background: $default;
+    color: white;
+}
+.plan{
+    label {
+        cursor: pointer;
+    }
+    .form-check-input:not(:checked) ~ label {
+        .selected {
+            display: none;
+        }
+        .select {
+            display: block;
+        }
+        .card-header{
+            color: $gray-300 !important;
+            border-color: $gray-500 !important;
+        }
+    }
+    .form-check-input:checked ~ label{
+        .selected {
+            display: block;
+        }
+        .select {
+            display: none
+        }
+        &.starter {
+            border: 5px solid $warning;
+            }
+        &.professional {
+        border: 5px solid $success;
+        }
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+    .onboarding-controls {
+        border-top: $card-border-width solid $card-border-color;
+        background: rgba($white,.75);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 999;
+    }
+}

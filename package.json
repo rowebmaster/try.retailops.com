@@ -1,0 +1,13 @@
+{
+  "name": "try.retailops.com",
+  "private": true,
+  "scripts": {
+    "build": "NF_IMAGE_VERSION=1 bash ./netlify-build-fix.sh && LD_LIBRARY_PATH=$(pwd)/tmp/usr/lib/x86_64-linux-gnu $(pwd)/tmp/usr/local/bin/hugo"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "autoprefixer": "^8.6.5",
+    "postcss-cli": "^6.0.1"
+  },
+  "devDependencies": {}
+}

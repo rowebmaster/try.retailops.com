@@ -1,0 +1,9 @@
+https://{{ strings.TrimLeft .Site.Params.domainName "." }}.netlify.com/* https://www.{{ .Site.Params.domainName }}/:splat 301!
+http://{{ strings.TrimLeft .Site.Params.domainName "." }}.netlify.com/* http://www.{{ .Site.Params.domainName }}/:splat 301!
+http://www.{{ strings.TrimLeft .Site.Params.domainName "." }}.com/* https://www.{{ .Site.Params.domainName }}/:splat 301!
+
+{{- range $p := .Site.Pages -}}
+{{- range .Aliases }}
+{{ . }} {{ $p.RelPermalink -}}
+{{- end }}
+{{- end }}

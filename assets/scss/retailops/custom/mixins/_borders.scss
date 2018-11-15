@@ -1,0 +1,5 @@
+@mixin border-size($parent, $size) {
+    #{$parent} {
+        border-width: $size !important;
+    }
+}

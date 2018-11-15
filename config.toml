@@ -1,0 +1,126 @@
+# Site settings
+# --------------
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ .Site.Params.myvariable }}.
+baseurl = "/" # The subpath of your site, e.g. / or /blog
+languageCode = "en-US"
+defaultContentLanguage = "en"
+title = "Try RetailOps"
+theme = "try"
+paginate = 10
+preserveTaxonomyNames = true
+summarylength = 30
+
+# Build settings
+# --------------
+disableHugoGeneratorInject = true
+
+enableRobotsTXT = true
+disableAliases = true
+
+# Enable this to have links relativized by Hugo
+# E.g,  if your /post/first/ page contains a link 
+# to /about/, Hugo will rewrite the URL to ../../about/
+relativeURLs = false
+
+# Enable to have links open in new tab
+hrefTargetBlank = false
+
+# Enable rendering of Emojis in markdown
+enableEmoji = true
+
+# Categories and tags disabled for an easier start
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+disableKinds = ["RSS",]
+
+# enableGitInfo = true
+
+[frontmatter]
+date  = ["publishDate", ":filename", ":default"]
+# lastmod = [":git" "lastmod", "date","publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
+
+[taxonomies]
+  "tag" = "tags"
+  "category" = "categories"
+
+[imaging]
+    # Default resample filter used for resizing. Default is Box,
+    # a simple and fast averaging filter appropriate for downscaling.
+    # See https://github.com/disintegration/imaging
+    resampleFilter = "Lanczos"
+
+    # Defatult JPEG quality setting. Default is 75.
+    quality = 75
+
+    # Anchor used when cropping pictures.
+    # Default is "smart" which does Smart Cropping, using https://github.com/muesli/smartcrop
+    # Smart Cropping is content aware and tries to find the best crop for each image.
+    # Valid values are Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+    anchor = "smart"
+
+# Site Params
+# -------------
+[params]
+disallow_search_engines = false # set robots.txt to disallow everything
+domainName = "xyzcompany.com"
+
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
+# Related Content
+# ---------------
+# Enable the options below to use Hugo's related
+# pages feature for related posts, etc.
+# https://gohugo.io/content-management/related/
+
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = true
+[[related.indices]]
+  name = "Section"
+  weight = 200
+[[related.indices]]
+  name = "related"
+  weight = 200
+  includeNewer = true
+[[related.indices]]
+  name = "keywords"
+  weight = 150
+[[related.indices]]
+  name = "categories"
+  weight = 150
+[[related.indices]]
+  name = "blog/tags"
+  weight = 100
+[[related.indices]]
+  name = "date"
+  pattern = "2006"
+  weight = 10
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
