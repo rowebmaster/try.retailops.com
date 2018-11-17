@@ -1,0 +1,438 @@
+{{ define "main"}}
+<main>
+    <div class="position-relative">
+        <!-- shape Hero -->
+        <section class="section section-lg section-shaped pb-250">
+            <div class="shape shape-style-1 shape-default home-hero-image">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="container py-lg-md d-flex">
+                <div class="col px-0">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            {{$image := resources.Get "images/shopify-retailops-2.png"}}
+                            {{ $image = $image.Resize "420x q100" }}
+                            <img class="img-fluid mb-4" src="{{$image.RelPermalink}}" alt="RetailOps customer, Randall Pitch, CEO of LiveFit Apparel"
+                                height="{{$image.Height}}" width="{{$image.Width}}">
+                            <h1 class="display-3  text-white">{{.Title}}
+                                <span>For growing and experienced retailers</span>
+                            </h1>
+                            <p class="lead  text-white">RetailOps + Shopify automates the nuts and bolts of your
+                                operation - freeing you to focus on what’s important to your customer.</p>
+                            <div class="btn-wrapper">
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#demoModal">Get
+                                    Free Trial</button>
+                                <a href="#learn-more" class="btn btn-white btn-icon mb-3 mb-sm-0">
+                                    <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
+                                    <span class="btn-inner--text">Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+            <div class="section-separator section-separator-bottom section-separator-skew">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+        </section>
+        <!-- 1st Hero Variation -->
+    </div>
+    <section id="learn-more" class="section section-lg pt-lg-0 mt--200">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row row-grid">
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                        <i class="fas fa-inventory "></i>
+                                    </div>
+                                    <h6 class="text-primary text-uppercase">Inventory Management</h6>
+                                    <p class="description mt-3">Automate channel updates, reduce carrying costs and
+                                        eliminate overselling with RetailOps’ Inventory Management tool.</p>
+                                    <div>
+                                        <span class="badge badge-pill badge-primary">Always Accurate Inventory</span>
+                                        <span class="badge badge-pill badge-primary">Inventory Channel sync</span>
+                                        <span class="badge badge-pill badge-primary">iOS App</span>
+                                    </div>
+                                    <a href="#invmgmt" class="btn btn-primary mt-4">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
+                                        <i class="fas fa-forklift "></i>
+                                    </div>
+                                    <h6 class="text-success text-uppercase">Warehouse Management</h6>
+                                    <p class="description mt-3">Improve fulfillment times, reduce shipping costs and
+                                        grow your business with RetailOps’ Warehouse Management system.</p>
+                                    <div>
+                                        <span class="badge badge-pill badge-success">Dynamic Placement</span>
+                                        <span class="badge badge-pill badge-success">Priority Shipping</span>
+                                        <span class="badge badge-pill badge-success">Amazon Prime Certified</span>
+                                    </div>
+                                    <a href="#warehousemgmt" class="btn btn-success mt-4">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                                        <i class="fas fa-tshirt "></i>
+                                    </div>
+                                    <h6 class="text-warning text-uppercase">Product Management</h6>
+                                    <p class="description mt-3">Everybody works from the same page with our Product
+                                        Management system, for more automation and reduced time-to-live.</p>
+                                    <div>
+                                        <span class="badge badge-pill badge-warning">Multi-listing support</span>
+                                        <span class="badge badge-pill badge-warning">Unlimited product attributes</span>
+                                    </div>
+                                    <a href="#productmgmt" class="btn btn-warning mt-4">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="invmgmt" class="section section-lg">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-md-6 order-md-2 text-right">
+                    <img class="floating inventory-management-image" src="https://d33wubrfki0l68.cloudfront.net/19583127831085203bb55614752e7793f70c178f/c816d/img/inventory-shelves.svg"
+                        alt="inventory-management-image" height="600">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="pr-md-5">
+                        <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
+                            <i class="fas fa-inventory"></i>
+                        </div>
+                        <h3>Inventory Management</h3>
+                        <p>Know where everything is, every step of the way – replace guesswork and overselling with
+                            automation, accountability and growth using our advanced inventory management system.</p>
+                        <ul class="list-unstyled mt-5">
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="badge badge-circle badge-success mr-3">
+                                            <i class="fas fa-barcode-scan"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Full Inventory Accountability</h6>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="badge badge-circle badge-success mr-3">
+                                            <i class="fas fa-truck-container"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Reduce Carrying Costs</h6>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="badge badge-circle badge-success mr-3">
+                                            <i class="fas fa-lock-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Reduced Theft Risk</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="warehousemgmt" class="section bg-secondary py-lg">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-md-6 position-absolute left-0">
+                    <img class="warehouse-management-image" src="https://d33wubrfki0l68.cloudfront.net/d00b3bc9a5370c4afe290d7ca32b1c94d99afabd/b6e3f/img/forklift-graphic-optimized.svg"
+                        alt="warehouse-management-image" height="600">
+                </div>
+                <div class="col-md-6  ml-auto">
+                    <div class="pl-md-5">
+                        <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Warehouse Management</h3>
+                        <p class="lead">Whether you want streamlined warehouse operations, improved fulfilment times or
+                            increased accountability, do it all with our complete warehouse management system.</p>
+                        <p>The warehouse is the heart of all eCommerce retail companies, and our Warehouse Management
+                            system ensures it keeps beating efficiently.</p>
+                        <p>With multi-warehouse support, our tools help you streamline warehouse operations, improving
+                            your fulfilment times and increasing accountability. Features include everything from smart
+                            shipment and product receiving, to on-demand barcoding with our innovative iOS app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="productmgmt" class="section pb-0 bg-gradient-success">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-md-6 order-lg-2 ml-lg-auto">
+                    <div class="position-relative pl-md-5">
+                        <img class="" src="https://cdn2.hubspot.net/hubfs/530512/ro_pub_2017/images/attribute_mgmt.svg?t=1528356004525"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="d-flex px-3">
+                        <div>
+                            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                                <i class="fas fa-tshirt text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <h4 class="display-3 text-white">Product Management</h4>
+                            <p class="text-white h5">An intuitive Product Management system for simple selling.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow shadow-lg--hover mt-5">
+                        <div class="card-body">
+                            <div class="d-flex px-3">
+                                <div>
+                                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                                        <i class="fas fa-filter"></i>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <h5 class="title text-success">Single Source of Product Data</h5>
+                                    <p>Product data is the heart of eCommerce - so ensure it’s accurate and organized
+                                        by controlling it from one source. List products across various sales channels,
+                                        place orders with vendors, and drive insights to your business through
+                                        reporting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow shadow-lg--hover mt-5">
+                        <div class="card-body">
+                            <div class="d-flex px-3">
+                                <div>
+                                    <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                                        <i class="fas fa-camera-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="pl-4">
+                                    <h5 class="title text-warning">Media Management</h5>
+                                    <p>Fast and flexible media management comes as standard with RetailOps. Simply drag
+                                        and drop your best images, then let us handle the rest. As soon as your media
+                                        is loaded, RetailOps instantly and automatically transcodes it to every size
+                                        permutation you need, ensuring your product is available for sale as quickly as
+                                        possible, across all your channels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="section-separator section-separator-bottom section-separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-lg">
+                <div class="col-lg-8">
+                    <h2 class="display-3">Our Amazing Customers</h2>
+                </div>
+            </div>
+            <div class="row mb-lg">
+                <div class="col-8 mb-4">
+                    {{$image := resources.Get "images/randall-livefit.jpg"}}
+                    {{ $image = $image.Fill "660x480 top" }}
+                    <img class="img-fluid card rounded shadow-sm" src="{{$image.RelPermalink}}" alt="RetailOps customer, Randall Pitch, CEO of LiveFit Apparel"
+                        height="{{$image.Height}}" width="{{$image.Width}}">
+                </div>
+                <div class="col-md-4">
+                    <h3 class="display-4">LiveFit Apparel</h3>
+                    <hr class="border-xs border-bottom border-primary w-25 m-0 mb-3">
+                    <ul class="list-unstyled mb-4">
+                        <li class="list-item mb-1">Growing lifestyle brand</li>
+                        <li class="list-item mb-1">3 Shopify web stores</li>
+                        <li class="list-item mb-1">1 Warehouse</li>
+                        <li class="list-item mb-1">Pop-up shops</li>
+                    </ul>
+                    <h5>Challenges</h5>
+                    <ul class="">
+                        <li class="list-item mb-1">Difficulty keeping track of their inventory as they were scaling</li>
+                        <li class="list-item mb-1">Trouble sending out orders on time and accurately</li>
+                        <li class="list-item mb-1">Unable to manage their product data across all their Shopify stores
+                            from one central location</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-5">
+
+                <div class="col-md-4 text-right">
+                    <h3 class="display-4">Good American</h3>
+                    <hr class="border-xs border-bottom border-primary w-25 m-0 mb-3 ml-auto">
+                    <ul class="list-unstyled mb-4">
+                        <li class="list-item mb-1">New brand backed by Khloe Kardashian</li>
+                        <li class="list-item mb-1">1 Shopify store</li>
+                        <li class="list-item mb-1">Dropship and JIT support</li>
+                    </ul>
+                    <h5 class="text-left">Challenges</h5>
+                    <ul class="text-left">
+                        <li class="list-item mb-1">Needed a solution to scale from 0 to thousands of orders on day one</li>
+                        <li class="list-item mb-1">Required a way to connect with their suppliers and to sync those
+                            products to their webstore</li>
+                    </ul>
+                </div>
+                <div class="col-8 mb-4">
+                    {{$image := resources.Get "images/goodamericanjeans.jpg"}}
+                    {{ $image = $image.Fill "660x480 top" }}
+                    <img class="img-fluid card rounded shadow-sm" src="{{$image.RelPermalink}}" alt="RetailOps customer, Randall Pitch, CEO of LiveFit Apparel"
+                        height="{{$image.Height}}" width="{{$image.Width}}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg pt-0">
+        <div class="container">
+            <div class="card bg-gradient-primary shadow-lg border-0">
+                <div class="p-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h3 class="text-white">We made eCommerce easier for you.</h3>
+                            <p class="lead text-white mt-3">Our philosophy is simple: create software that makes your
+                                life easier and more profitable, without getting in the way.</p>
+                        </div>
+                        <div class="col-lg-4 ml-lg-auto">
+                                <button type="button" class="btn btn-lg btn-block btn-white" data-toggle="modal" data-target="#demoModal">Request
+                                        your free trial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg bg-gradient-default">
+        <div class="container pt-lg pb-300">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="display-3 text-white">Grow Faster</h2>
+                    <p class="lead text-white">RetailOps helps retailers do three things really, really well.</p>
+                </div>
+            </div>
+            <div class="row row-grid mt-5">
+                <div class="col-lg-4">
+                    <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                        <i class="fas fa-shipping-fast text-primary"></i>
+                    </div>
+                    <h5 class="text-white mt-3">Get the right orders to the right customers quickly</h5>
+                    <p class="text-white mt-3">Never lose an order and never send the wrong item to a customer again.
+                        Our industry-leading products ensure that your customers receive a memorable experience.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                        <i class="fas fa-weight text-primary"></i>
+                    </div>
+                    <h5 class="text-white mt-3">Receive the benefits of lean and efficient operations</h5>
+                    <p class="text-white mt-3">From always-accurate inventory to creating and tracking KPI’s, we create
+                        leaner operations by tracking everything from the ground up.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                        <i class="fas fa-chart-line text-primary"></i>
+                    </div>
+                    <h5 class="text-white mt-3">Grow your business without the growing pains</h5>
+                    <p class="text-white mt-3">Add an unlimited number of sales channels and products while keeping
+                        them all up-to-date in real-time without any intervention.</p>
+                </div>
+            </div>
+        </div>
+        <!-- SVG separator -->
+        <div class="section-separator section-separator-bottom section-separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </section>
+    <section class="section section-lg pt-lg-0 section-contact-us">
+        <div class="container">
+            <div class="row justify-content-center mt--300">
+                <div class="col-lg-8">
+                    <div class="card bg-gradient-secondary shadow">
+                        <div class="card-body p-lg-5">
+                                <h4 class="mb-1">Want to see RetailOps + Shopify in action?</h4>
+                                <p class="mt-0 mb-4">Request your free trial today!</p>
+                            {{ partial "form" .}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg">
+        <div class="container">
+            <div class="row row-grid justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-3">Do you love shopify
+                        <span class="text-success">But need operational help?</span>
+                    </h2>
+                    <p class="lead">If you do, we have your back. Hit the button below to request your free trial of
+                        RetailOps' Retail Automation Software with Shopify.</p>
+                    <div class="btn-wrapper">
+                            <button type="button" class="btn btn-primary mb-3 mb-sm-0" data-toggle="modal" data-target="#demoModal">Request
+                                    trial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="card bg-secondary shadow border-0">
+                    <div class="card-header bg-white pb-5">
+                        <div class="text-muted text-center w-75 mx-auto">
+                            <h4>RetailOps + Shopify Trial</h4>
+                            <h6>Enter you information below to see if you qualify for a free 30 day trial</h6>
+                        </div>
+                    </div>
+                    <div class="card-body px-lg-5 py-lg-5">
+                        {{ partial "form" .}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ define "pagescripts" }}
+{{ end }}
