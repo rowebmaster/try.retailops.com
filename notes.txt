@@ -1,0 +1,6 @@
+Hubspot account id: 530512
+Hubspot + shopify form: 5d212505-d1cc-4e01-9078-1dfa5820ca8e
+
+
+form labels:
+products_of_interest
